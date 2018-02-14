@@ -5,7 +5,7 @@ public class Banque {
 	private Client [] clients= new Client[100];
 	
 	public void ajouterClient() {
-		if(this.nbClient-1<100) {
+		if(nbClient-1<100) {
 			nbClient++;
 			clients[nbClient].ajouterCompte();
 		}
@@ -13,7 +13,7 @@ public class Banque {
 	
 	public void afficherBilan() {
 		for(int i=0;i<nbClient;i++) {
-			this.clients[i].afficherBilan();
+			clients[i].afficherBilan();
 		}
 	}
 }

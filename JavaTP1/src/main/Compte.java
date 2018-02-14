@@ -10,13 +10,13 @@ public class Compte {
 		this.solde-=valeur;
 	}
 	float getSolde() {
-		return this.solde;
+		return solde;
 	}
 	void afficherSolde() {
-		System.out.println(this.solde);
+		System.out.println(solde);
 	}
 	void virer(float valeur, Compte destinataire) {
 		destinataire.solde+=valeur;
-		this.solde-=valeur;
+		solde-=valeur;
 	}
 }

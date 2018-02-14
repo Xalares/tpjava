@@ -21,31 +21,31 @@ public class Date {
 
 	/**Methode getJour*/
 	public int getJour() {
-		return this.jour;
+		return jour;
 	}
 
 	public int getMois() {
-		return this.mois;
+		return mois;
 	}
 
 	public int getAn() {
-		return this.an;
+		return an;
 	}
 
 	public int getHeure() {
-		return this.heure;
+		return heure;
 	}
 
 	public int getMinute() {
-		return this.minute;
+		return minute;
 	}
 
 	public int getSeconde() {
-		return this.seconde;
+		return seconde;
 	}
 	
 	/**@overrides*/
 	public String toString() {
-		return(this.heure+":"+this.minute+":"+this.seconde+" "+this.jour+"/"+this.mois+"/"+this.an);
+		return(heure+":"+minute+":"+seconde+" "+jour+"/"+mois+"/"+an);
 	}
 }

@@ -27,16 +27,16 @@ public class Client {
 	}
 	
 	public String getNom() {
-		return (this.nom);
+		return (nom);
 	}
 
 	public Date getDate() {
-		return (this.dateNaissance);
+		return (dateNaissance);
 	}
 
 	public Compte getCompte(int numero) {
-		if (numero <= this.nbCompte & numero > 0) {
-			return (this.comptes[numero - 1]);
+		if (numero <= nbCompte & numero > 0) {
+			return (comptes[numero - 1]);
 		} else {
 			System.out.println("Numero de compte invalide");
 			return (null);
@@ -45,28 +45,28 @@ public class Client {
 	}
 
 	public void afficherBilan() {
-		for (int i = 0; i < this.nbCompte; i++) {
-			System.out.println("Solde du compte" + i + " = " + this.comptes[i].getSolde());
+		for (int i = 0; i <nbCompte; i++) {
+			System.out.println("Solde du compte" + i + " = " + comptes[i].getSolde());
 		}
 	}
 
 	public float soldeTotal() {
 		float total=0;
 		for (int i = 0; i < this.nbCompte; i++) {
-			total+=this.comptes[i].getSolde();
+			total+=comptes[i].getSolde();
 		}
 		return total;
 	}
 	
 	/**Affiche le solde total**/
 	public void afficherSolde() {
-		System.out.println(this.soldeTotal());
+		System.out.println(soldeTotal());
 	}
 	
 	public void ajouterCompte() {
 		if(nbCompte+1<100) {
-			this.nbCompte++;
-			this.comptes[nbCompte].depot(0);
+			nbCompte++;
+			comptes[nbCompte].depot(0);
 		}else {
 			System.out.println("nombre de comptes dépassé !");
 		}
