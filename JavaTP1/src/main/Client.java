@@ -6,8 +6,8 @@ public class Client {
 	private Date dateNaissance;
 	private Compte compteClient;
 	private int nbCompte;
-	private Compte comptes[];
-
+	private Compte [] comptes=new Compte[100];
+	
 	public Client(String nom, Date date, Compte premCompte, int nbCompte) {
 
 		this.nom = nom;
@@ -15,14 +15,17 @@ public class Client {
 		this.compteClient = premCompte;
 		if (nbCompte <= 100 & nbCompte > 0) {
 			this.nbCompte = nbCompte;
-			this.comptes = new Compte[nbCompte];
-			this.comptes[0].depot(0);
+			
+			for(int i=0;i<nbCompte;i++) {
+				this.comptes[i].depot(0);
+			}
+			
 		} else {
 			System.out.println("Nombre de compte invalide");
 		}
 
 	}
-
+	
 	public String getNom() {
 		return (this.nom);
 	}
@@ -48,8 +51,25 @@ public class Client {
 	}
 
 	public float soldeTotal() {
+		float total=0;
 		for (int i = 0; i < this.nbCompte; i++) {
-
+			total+=this.comptes[i].getSolde();
 		}
+		return total;
+	}
+	
+	/**Affiche le solde total**/
+	public void afficherSolde() {
+		System.out.println(this.soldeTotal());
+	}
+	
+	public void ajouterCompte() {
+		if(nbCompte+1<100) {
+			this.nbCompte++;
+			this.comptes[nbCompte].depot(0);
+		}else {
+			System.out.println("nombre de comptes dépassé !");
+		}
+		
 	}
 }
