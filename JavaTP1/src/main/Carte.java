@@ -15,7 +15,9 @@ public class Carte {
 			return false;
 		}
 	}
+	/*
 	void payer(Banque b, int numClient,int numCompte, float montant) {
 		banqueAsso.retrait();
 	}
+	*/
 }
