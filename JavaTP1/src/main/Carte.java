@@ -9,6 +9,7 @@ public class Carte {
 	private int compteur=3;
 	
 	boolean codeValide(int[] codeVer) {
+		
 		if(codeVer==code) {
 			return true;
 		}else {
