@@ -14,6 +14,7 @@ public class Main {
 	public static void main(String[] args) {
 		Banque creditAgricole = new Banque();
 		Banque caisseDepargne = new Banque();
+		
 		Date dateNaissanceA = new Date(2,10,1995);
 		Date dateNaissanceB = new Date(12,5,1995);
 		
@@ -29,7 +30,7 @@ public class Main {
 		Alexis.afficherSolde();
 		Bruno.afficherSolde();
 		
-		creditAgricole.ajouterClient();
+		creditAgricole.ajouterClient(Alexis);
 		
 		
 		// TODO Auto-generated method stub

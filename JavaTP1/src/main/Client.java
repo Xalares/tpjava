@@ -17,6 +17,7 @@ public class Client {
 			this.nbCompte = nbCompte;
 			
 			for(int i=0;i<nbCompte;i++) {
+				this.comptes[i]=new Compte();
 				this.comptes[i].depot(0);
 			}
 			
@@ -66,6 +67,7 @@ public class Client {
 	public void ajouterCompte() {
 		if(nbCompte+1<100) {
 			nbCompte++;
+			comptes[nbCompte]=new Compte();
 			comptes[nbCompte].depot(0);
 		}else {
 			System.out.println("nombre de comptes dépassé !");
