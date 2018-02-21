@@ -23,9 +23,9 @@ public class Main {
 		compteA.depot(1200);
 		compteB.depot(4500);
 		
-		
 		Client Alexis=new Client("Alexis",dateNaissanceA,compteA,1);
 		Client Bruno=new Client("Bruno",dateNaissanceB,compteB,1);
+		
 		Alexis.afficherSolde();
 		Bruno.afficherSolde();
 		
